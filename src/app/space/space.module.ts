@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { DestinationComponent } from './pages/destination/destination.component';
 import { CrewComponent } from './pages/crew/crew.component';
 import { TechnologyComponent } from './pages/technology/technology.component';
+import { CircleExploreComponent } from './components/circle-explore/circle-explore.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { TechnologyComponent } from './pages/technology/technology.component';
     HomeComponent,
     DestinationComponent,
     CrewComponent,
-    TechnologyComponent
+    TechnologyComponent,
+    CircleExploreComponent
   ],
   imports: [
     CommonModule,
