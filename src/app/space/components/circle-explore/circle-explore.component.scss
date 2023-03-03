@@ -37,3 +37,16 @@
 .circle:hover .circle__shadow {
   display: block;
 }
+
+//* MOBILE
+@media screen and (max-width: 600px) {
+  .circle,
+  .circle__figure {
+    width: 150px;
+    height: 150px;
+  }
+
+  .circle__text {
+    font-size: 20px;
+  }
+}

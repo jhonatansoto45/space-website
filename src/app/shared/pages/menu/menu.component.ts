@@ -30,7 +30,13 @@ export class MenuComponent implements OnInit {
     },
   ];
 
+  openPopup: boolean = false;
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  openMenu(): void {
+    this.openPopup = !this.openPopup;
+  }
 }
