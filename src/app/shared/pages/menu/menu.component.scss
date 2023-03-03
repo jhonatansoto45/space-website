@@ -48,3 +48,25 @@ hr {
   line-height: 94px;
   border-color: var(--color-hover);
 }
+
+//* TABLET
+@media screen and (max-width: 800px) {
+  .header {
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding-right: 0;
+    backdrop-filter: blur(0px);
+  }
+
+  hr,
+  .header__id {
+    display: none;
+  }
+
+  .header__list {
+    backdrop-filter: blur(16px);
+    background-color: rgb(255, 255, 255, 4%);
+    padding: 0 50px;
+  }
+}
