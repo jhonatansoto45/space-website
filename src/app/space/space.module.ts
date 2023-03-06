@@ -7,6 +7,8 @@ import { DestinationComponent } from './pages/destination/destination.component'
 import { CrewComponent } from './pages/crew/crew.component';
 import { TechnologyComponent } from './pages/technology/technology.component';
 import { CircleExploreComponent } from './components/circle-explore/circle-explore.component';
+import { PlanetsComponent } from './components/planets/planets.component';
+import { PlanetPipe } from './pipes/planet.pipe';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { CircleExploreComponent } from './components/circle-explore/circle-explo
     DestinationComponent,
     CrewComponent,
     TechnologyComponent,
-    CircleExploreComponent
+    CircleExploreComponent,
+    PlanetsComponent,
+    PlanetPipe
   ],
   imports: [
     CommonModule,

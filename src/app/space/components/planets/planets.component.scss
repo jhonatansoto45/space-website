@@ -1,0 +1,11 @@
+.planet__legend {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.planet__number {
+  font-weight: 600;
+  color: var(--color-number);
+}

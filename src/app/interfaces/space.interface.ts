@@ -1,5 +1,10 @@
 export interface MenuItem {
-  id: string
+  id: string;
   name: string;
-  url: string
+  url: string;
+}
+
+export interface TabsItem {
+  id: number;
+  name: string;
 }
