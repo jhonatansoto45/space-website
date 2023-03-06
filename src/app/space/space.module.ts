@@ -2,28 +2,25 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SpaceRoutingModule } from './space-routing.module';
-import { HomeComponent } from './pages/home/home.component';
-import { DestinationComponent } from './pages/destination/destination.component';
-import { CrewComponent } from './pages/crew/crew.component';
-import { TechnologyComponent } from './pages/technology/technology.component';
+
 import { CircleExploreComponent } from './components/circle-explore/circle-explore.component';
+import { CrewComponent } from './pages/crew/crew.component';
+import { DestinationComponent } from './pages/destination/destination.component';
+import { HomeComponent } from './pages/home/home.component';
 import { PlanetsComponent } from './components/planets/planets.component';
 import { PlanetPipe } from './pipes/planet.pipe';
-
+import { TechnologyComponent } from './pages/technology/technology.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    DestinationComponent,
-    CrewComponent,
-    TechnologyComponent,
     CircleExploreComponent,
+    CrewComponent,
+    DestinationComponent,
     PlanetsComponent,
-    PlanetPipe
+    PlanetPipe,
+    TechnologyComponent,
   ],
-  imports: [
-    CommonModule,
-    SpaceRoutingModule
-  ]
+  imports: [CommonModule, SpaceRoutingModule],
 })
-export class SpaceModule { }
+export class SpaceModule {}

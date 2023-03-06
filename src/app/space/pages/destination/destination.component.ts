@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TabsItem } from 'src/app/interfaces/space.interface';
+import { Destination, TabsItem } from '../../../interfaces/space.interface';
+import { SpaceService } from '../../../services/space.service';
 
 @Component({
   selector: 'app-destination',
@@ -27,15 +28,17 @@ export class DestinationComponent implements OnInit {
   ];
 
   activeLink!: TabsItem;
+  dataItem!: Destination;
 
-  constructor() {
+  constructor(private spaceService: SpaceService) {}
+
+  ngOnInit(): void {
     this.activeLink = this.listTabs[0];
+    this.dataItem = this.spaceService.findIndex(0);
   }
-
-  ngOnInit(): void {}
-
 
   onItemSelected(index: number): void {
     this.activeLink = this.listTabs[index];
+    this.dataItem = this.spaceService.findIndex(index);
   }
 }

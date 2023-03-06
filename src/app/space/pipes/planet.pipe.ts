@@ -5,6 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class PlanetPipe implements PipeTransform {
   transform(imagen: string): string {
-    return `../../../assets/destination/${imagen}.webp`;
+    const array = imagen.split('/');
+    const imageUrl = array[array.length - 1];
+    return `../../../assets/destination/${imageUrl}`;
   }
 }

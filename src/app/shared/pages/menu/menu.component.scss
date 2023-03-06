@@ -24,6 +24,7 @@ hr {
   background-color: transparent;
   display: none;
   cursor: pointer;
+  border: none;
 }
 
 .header__menu::before {
@@ -136,6 +137,7 @@ hr {
   .header__id,
   .menu__close {
     display: inline-block;
+    border: none;
   }
 
   .header__id {

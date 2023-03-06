@@ -39,4 +39,8 @@ export class MenuComponent implements OnInit {
   openMenu(): void {
     this.openPopup = !this.openPopup;
   }
+
+  hideMenu(): void {
+    this.openPopup = false;
+  }
 }

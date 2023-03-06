@@ -27,6 +27,7 @@
     class="menu__list"
     *ngFor="let item of listMenu"
     [routerLink]="[item.url]"
+    (click)="hideMenu()"
   >
     <span class="header__id"> {{ item.id }} </span>
     <a class="header__text">
