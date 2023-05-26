@@ -1,0 +1,38 @@
+<section class="destination">
+  <div class="destination__container">
+    <app-planets
+      class="destination__planet"
+      [imageUrl]="dataItem.images.png"
+    ></app-planets>
+    <ng-container [ngTemplateOutlet]="tabs"></ng-container>
+  </div>
+</section>
+
+<ng-template #tabs>
+  <section class="tabs">
+    <app-tabs
+      [typeTab]="typeTab.tab"
+      [data]="listTabs"
+      [dataNormal]="dataDestination"
+      (selected)="onItemSelected($event)"
+    ></app-tabs>
+
+    <article class="tabs__container">
+      <h2 class="tabs__title">{{ dataItem.name }}</h2>
+      <p class="tabs__paragraph">
+        {{ dataItem.description }}
+      </p>
+      <hr />
+      <div class="tabs__description">
+        <div class="tabs__contain">
+          <p class="subheading2">AVG. DISTANCE</p>
+          <p class="subheading1 tabs__distance">{{ dataItem.distance }}</p>
+        </div>
+        <div class="tabs__contain">
+          <p class="subheading2">EST. TRAVEL TIME</p>
+          <p class="subheading1 tabs__travel">{{ dataItem.travel }}</p>
+        </div>
+      </div>
+    </article>
+  </section>
+</ng-template>

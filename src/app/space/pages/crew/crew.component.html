@@ -1,0 +1,25 @@
+<section class="crew">
+  <div class="crew__container">
+    <div class="crew__title">
+      <h5 class="crew__number">02</h5>
+      <h5 class="crew__text">MEET YOUR CREW</h5>
+    </div>
+    <div class="crew__divisor">
+      <article class="crew__contain">
+        <h4 class="crew__role">{{ dataItem.role }}</h4>
+        <h3 class="crew__name">{{ dataItem.name }}</h3>
+        <p class="crew__bio">
+          {{ dataItem.bio }}
+        </p>
+      </article>
+      <app-tabs
+      class="tabs"
+        [typeTab]="typeTab.slider"
+        [data]="slider"
+        [dataNormal]="dataCrew"
+        (selected)="onItemSelected($event)"
+      ></app-tabs>
+    </div>
+    <img class="crew__img" [src]="dataItem.images.png" alt="Character" />
+  </div>
+</section>

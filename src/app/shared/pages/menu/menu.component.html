@@ -1,0 +1,37 @@
+<header class="header">
+  <img
+    src="../../../../assets/shared/logo.svg"
+    alt="Logo"
+    class="header__logo"
+  />
+  <hr />
+  <nav class="header__list">
+    <div
+      class="header__item"
+      *ngFor="let item of listMenu"
+      [routerLink]="[item.url]"
+      routerLinkActive="active__link"
+    >
+      <span class="header__id"> {{ item.id }} </span>
+      <a class="header__text">
+        {{ item.name }}
+      </a>
+    </div>
+  </nav>
+  <button class="header__menu" (click)="openMenu()"></button>
+</header>
+
+<section class="menu" [ngClass]="{ menu__visible: openPopup }">
+  <button class="menu__close" (click)="openMenu()"></button>
+  <div
+    class="menu__list"
+    *ngFor="let item of listMenu"
+    [routerLink]="[item.url]"
+    (click)="hideMenu()"
+  >
+    <span class="header__id"> {{ item.id }} </span>
+    <a class="header__text">
+      {{ item.name }}
+    </a>
+  </div>
+</section>

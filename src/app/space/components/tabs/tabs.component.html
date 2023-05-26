@@ -1,0 +1,48 @@
+<section [ngSwitch]="typeTab">
+  <article *ngSwitchCase="tab?.round">
+    <ng-container [ngTemplateOutlet]="roundT"></ng-container>
+  </article>
+  <article *ngSwitchCase="tab?.slider">
+    <ng-container [ngTemplateOutlet]="sliderT"></ng-container>
+  </article>
+  <article *ngSwitchCase="tab?.tab">
+    <ng-container [ngTemplateOutlet]="tabT"></ng-container>
+  </article>
+</section>
+
+<ng-template #roundT>
+  <div class="round__contain">
+    <button
+      class="round"
+      *ngFor="let tab of data"
+      (click)="onItemSelected(tab)"
+      [ngClass]="{ active__link: activeLink === tab.id }"
+    >
+      {{ tab.id }}
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #sliderT>
+  <div class="crew__slider__circle">
+    <button
+      class="crew__slider__item"
+      *ngFor="let tab of data"
+      (click)="onItemSelected(tab)"
+      [ngClass]="{ 'active__slide--slider': activeLink === tab.id }"
+    ></button>
+  </div>
+</ng-template>
+
+<ng-template #tabT>
+  <article class="tabs__list">
+    <button
+      class="tabs__item"
+      *ngFor="let tab of data"
+      (click)="onItemSelected(tab)"
+      [ngClass]="{ 'active__link--tab': activeLink === tab.id }"
+    >
+      {{ tab.name }}
+    </button>
+  </article>
+</ng-template>

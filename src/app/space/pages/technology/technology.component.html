@@ -1,0 +1,30 @@
+<section class="technology">
+  <article class="technology__container">
+    <div class="technology__title">
+      <h5 class="technology__number">03</h5>
+      <h5 class="technology__text">SPACE LAUNCH 101</h5>
+    </div>
+    <div class="technology__content">
+      <app-tabs
+        [typeTab]="typeTab.round"
+        [data]="listTabs"
+        [dataNormal]="dataTechnology"
+        (selected)="onItemSelected($event)"
+      ></app-tabs>
+      <div class="technology__paragraph">
+        <h5 class="technology__legend">THE TERMINOLOGY…</h5>
+        <h3 class="technology__text">{{ dataItem.name }}</h3>
+        <p class="technology__description subheading2">
+          {{ dataItem.description }}
+        </p>
+      </div>
+      <picture class="technology__picture">
+        <img
+          [src]="dataItem.images.portrait"
+          alt="Image Space"
+          class="technology__img"
+        />
+      </picture>
+    </div>
+  </article>
+</section>
